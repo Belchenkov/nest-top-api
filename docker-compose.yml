@@ -1,10 +1,10 @@
 version: '3'
 services:
   mongo:
-    image: clutteredcode/mongo-alpine
+    image: mongo
     container_name: mongo
     restart: always
-    entrypoint:
+    environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=admin
     ports:
